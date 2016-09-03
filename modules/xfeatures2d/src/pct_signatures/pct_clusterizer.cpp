@@ -79,7 +79,7 @@ namespace cv
                     int clusterMinSize,
                     float joiningDistance,
                     float dropThreshold,
-                    pct_signatures::DistanceFunction distanceFunction)
+                    PCTSignatures::DistanceFunction distanceFunction)
                     : mInitSeedIndexes(initSeedIndexes),
                     mIterationCount(iterationCount),
                     mMaxClustersCount(maxClustersCount),
@@ -101,7 +101,7 @@ namespace cv
                 int getClusterMinSize() const                       { return mClusterMinSize; }
                 float getJoiningDistance() const                    { return mJoiningDistance; }
                 float getDropThreshold() const                      { return mDropThreshold; }
-                pct_signatures::DistanceFunction getDistanceFunction() const
+                PCTSignatures::DistanceFunction getDistanceFunction() const
                                                                     { return mDistanceFunction; }
 
                 void setIterationCount(int iterationCount)                  { mIterationCount = iterationCount; }
@@ -110,7 +110,7 @@ namespace cv
                 void setClusterMinSize(int clusterMinSize)                  { mClusterMinSize = clusterMinSize; }
                 void setJoiningDistance(float joiningDistance)              { mJoiningDistance = joiningDistance; }
                 void setDropThreshold(float dropThreshold)                  { mDropThreshold = dropThreshold; }
-                void setDistanceFunction(pct_signatures::DistanceFunction distanceFunction)
+                void setDistanceFunction(PCTSignatures::DistanceFunction distanceFunction)
                                                                             { mDistanceFunction = distanceFunction; }
 
 
@@ -427,7 +427,7 @@ namespace cv
                 /**
                 * @brief L_p metric is used for computing distances.
                 */
-                pct_signatures::DistanceFunction mDistanceFunction;
+                PCTSignatures::DistanceFunction mDistanceFunction;
 
             };
 
@@ -439,7 +439,7 @@ namespace cv
                 int clusterMinSize,
                 float joiningDistance,
                 float dropThreshold,
-                pct_signatures::DistanceFunction distanceFunction)
+                PCTSignatures::DistanceFunction distanceFunction)
             {
                 return makePtr<PCTClusterizer_Impl>(
                     initSeedIndexes,

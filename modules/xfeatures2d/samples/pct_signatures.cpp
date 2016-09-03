@@ -69,6 +69,7 @@ using namespace cv;
 using namespace xfeatures2d;
 
 
+void printHelpMessage(void);
 void printHelpMessage(void)
 {
     cout << "Example of the PCTSignatures algorithm computing and visualizing\n"
@@ -119,7 +120,7 @@ int main(int argc, char** argv)
     namedWindow("Result", WINDOW_AUTOSIZE);
 
     // create the algorithm
-    PCTSignatures::generateInitPoints(initPoints, initSampleCount, pct_signatures::UNIFORM);
+    PCTSignatures::generateInitPoints(initPoints, initSampleCount, PCTSignatures::UNIFORM);
     Ptr<PCTSignatures> pctSignatures = PCTSignatures::create(initPoints, initSeedCount);
     pctSignatures->setGrayscaleBits(grayscaleBitsPerPixel);
 

@@ -287,6 +287,28 @@ public:
 
 namespace pct_signatures
 {
+
+
+
+}
+
+/**
+* @brief Class implementing PCT (position-color-texture) signature extraction
+*       as described in @cite KrulisLS16.
+*       The algorithm is divided to a feature sampler and a clusterizer.
+*       Feature sampler produces samples at given set of coordinates.
+*       Clusterizer then produces clusters of these samples using k-means algorithm.
+*       Resulting set of clusters is the signature of the input image.
+*
+*       A signature is an array of SIGNATURE_DIMENSION-dimensional points.
+*       Used dimensions are:
+*       weight, x, y position; lab color, contrast, entropy.
+* @cite KrulisLS16
+* @cite BeecksUS10
+*/
+class CV_EXPORTS_W PCTSignatures : public Algorithm
+{
+public:
     /**
     * @brief Lp distance function selector.
     */
@@ -323,26 +345,6 @@ namespace pct_signatures
     };
 
 
-}
-
-/**
-* @brief Class implementing PCT (position-color-texture) signature extraction
-*       as described in @cite KrulisLS16.
-*       The algorithm is divided to a feature sampler and a clusterizer.
-*       Feature sampler produces samples at given set of coordinates.
-*       Clusterizer then produces clusters of these samples using k-means algorithm.
-*       Resulting set of clusters is the signature of the input image.
-*
-*       A signature is an array of SIGNATURE_DIMENSION-dimensional points.
-*       Used dimensions are:
-*       weight, x, y position; lab color, contrast, entropy.
-* @cite KrulisLS16
-* @cite BeecksUS10
-*/
-class CV_EXPORTS_W PCTSignatures : public Algorithm
-{
-public:
-
     /**
     * @brief Creates PCTSignatures algorithm using sample and seed count.
     *       It generates its own sets of sampling points and clusterization seed indexes.
@@ -355,7 +357,7 @@ public:
     CV_WRAP static Ptr<PCTSignatures> create(
         const int initSampleCount = 2000,
         const int initSeedCount = 400,
-        const pct_signatures::PointDistribution pointDistribution = pct_signatures::UNIFORM);
+        const PointDistribution pointDistribution = UNIFORM);
 
     /**
     * @brief Creates PCTSignatures algorithm using pre-generated sampling points
@@ -431,7 +433,7 @@ public:
     CV_WRAP static void generateInitPoints(
         std::vector<Point2f>& initPoints,
         const int count,
-        pct_signatures::PointDistribution pointsDistribution);
+        PointDistribution pointsDistribution);
 
 
     /**** sampler ****/
@@ -698,11 +700,11 @@ public:
     /**
     * @brief Distance function selector used for measuring distance between two points in k-means.
     */
-    CV_WRAP virtual pct_signatures::DistanceFunction getDistanceFunction() const = 0;
+    CV_WRAP virtual DistanceFunction getDistanceFunction() const = 0;
     /**
     * @brief Distance function selector used for measuring distance between two points in k-means.
     */
-    CV_WRAP virtual void setDistanceFunction(pct_signatures::DistanceFunction distanceFunction) = 0;
+    CV_WRAP virtual void setDistanceFunction(DistanceFunction distanceFunction) = 0;
 
 };
 
@@ -726,8 +728,8 @@ public:
     * @param similarityParameter Parameter of the similarity function.
     */
     CV_WRAP static Ptr<PCTSignaturesSQFD> create(
-        const pct_signatures::DistanceFunction distanceFunction = pct_signatures::L2,
-        const pct_signatures::SimilarityFunction similarityFunction = pct_signatures::HEURISTIC,
+        const PCTSignatures::DistanceFunction distanceFunction = PCTSignatures::L2,
+        const PCTSignatures::SimilarityFunction similarityFunction = PCTSignatures::HEURISTIC,
         const float similarityParameter = 1);
 
     /**

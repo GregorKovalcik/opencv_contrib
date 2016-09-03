@@ -69,6 +69,7 @@ using namespace cv;
 using namespace xfeatures2d;
 
 
+void printHelpMessage(void);
 void printHelpMessage(void)
 {
     cout << "Example of the PCTSignatures algorithm.\n\n"
@@ -112,7 +113,7 @@ int main(int argc, char** argv)
     {
         try
         {
-            initSampleCount = stoi(argv[1]);
+            initSampleCount = atoi(argv[1]);
             if (initSampleCount <= 0)
             {
                 cerr << "Sample count have to be a positive integer!" << endl;
@@ -131,7 +132,7 @@ int main(int argc, char** argv)
     {
         try
         {
-            initSeedCount = stoi(argv[2]);
+            initSeedCount = atoi(argv[2]);
             if (initSeedCount <= 0)
             {
                 cerr << "Seed count have to be a positive integer!" << endl;

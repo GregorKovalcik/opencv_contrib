@@ -213,8 +213,8 @@ namespace cv
 
 
         Ptr<PCTSignaturesSQFD> PCTSignaturesSQFD::create(
-            const pct_signatures::DistanceFunction distance,
-            const pct_signatures::SimilarityFunction similarity,
+            const PCTSignatures::DistanceFunction distance,
+            const PCTSignatures::SimilarityFunction similarity,
             const float similarityParameter)
         {
             return makePtr<pct_signatures::PCTSignaturesSQFD_Impl>(distance, similarity, similarityParameter);

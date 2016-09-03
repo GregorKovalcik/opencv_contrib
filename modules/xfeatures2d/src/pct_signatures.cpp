@@ -170,7 +170,7 @@ namespace cv
                 int getClusterMinSize() const                       { return mClusterizer->getClusterMinSize(); }
                 float getJoiningDistance() const                    { return mClusterizer->getJoiningDistance(); }
                 float getDropThreshold() const                      { return mClusterizer->getDropThreshold(); }
-                pct_signatures::DistanceFunction getDistanceFunction() const
+                DistanceFunction getDistanceFunction() const
                                                                     { return mClusterizer->getDistanceFunction(); }
 
                 void setIterationCount(int iterations)              { mClusterizer->setIterationCount(iterations); }
