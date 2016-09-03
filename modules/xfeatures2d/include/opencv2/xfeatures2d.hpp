@@ -726,7 +726,7 @@ public:
     * @param similarityParameter Parameter of the similarity function.
     */
     CV_WRAP static Ptr<PCTSignaturesSQFD> create(
-        const pct_signatures::DistanceFunction distanceFunction = pct_signatures::DistanceFunction::L2,
+        const pct_signatures::DistanceFunction distanceFunction = pct_signatures::L2,
         const pct_signatures::SimilarityFunction similarityFunction = pct_signatures::HEURISTIC,
         const float similarityParameter = 1);
 
