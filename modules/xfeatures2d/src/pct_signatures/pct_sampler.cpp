@@ -161,7 +161,7 @@ namespace cv
                     }
                     else
                     {
-                        for (int i = 0; i < mWeights.size(); ++i)
+                        for (int i = 0; i < (int)(mWeights.size()); ++i)
                         {
                             mWeights[i] = weights[i];
                         }
@@ -182,7 +182,7 @@ namespace cv
                     }
                     else
                     {
-                        for (int i = 0; i < mTranslations.size(); ++i)
+                        for (int i = 0; i < (int)(mTranslations.size()); ++i)
                         {
                             mTranslations[i] = translations[i];
                         }
@@ -196,12 +196,12 @@ namespace cv
                 {
                     // prepare matrices
                     Mat image = _image.getMat();
-                    _samples.create((int)mInitSamplingPoints.size(), SIGNATURE_DIMENSION, CV_32F);
+                    _samples.create((int)(mInitSamplingPoints.size()), SIGNATURE_DIMENSION, CV_32F);
                     Mat samples = _samples.getMat();
                     GrayscaleBitmap grayscaleBitmap(image, mGrayscaleBits);
 
                     // sample each sample point
-                    for (int iSample = 0; iSample < mInitSamplingPoints.size(); iSample++)
+                    for (int iSample = 0; iSample < (int)(mInitSamplingPoints.size()); iSample++)
                     {
                         // sampling points are in range [0..1)
                         int x = (int)(mInitSamplingPoints[iSample].x * (image.cols));

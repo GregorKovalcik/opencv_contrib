@@ -126,7 +126,7 @@ namespace cv
                     float difference = points1.at<float>(idx1, d) - points2.at<float>(idx2, d);
                     result += difference * difference;
                 }
-                return std::sqrtf(result);
+                return (float)std::sqrt(result);
             }
 
 

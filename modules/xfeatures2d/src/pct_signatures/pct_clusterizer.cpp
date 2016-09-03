@@ -126,7 +126,7 @@ namespace cv
                     // prepare matrices
                     Mat samples = _samples.getMat();
 
-                    if (this->mInitSeedIndexes.size() > samples.rows)
+                    if ((int)(this->mInitSeedIndexes.size()) > samples.rows)
                     {
                         CV_Error_(Error::StsBadArg, ("Number of seeds %d must be less or equal to the number of samples %d.",
                             mInitSeedIndexes.size(), samples.rows));
@@ -383,7 +383,7 @@ namespace cv
                     clusters.create(0, SIGNATURE_DIMENSION, samples.type());
                     clusters.reserve(mInitSeedIndexes.size());
 
-                    for (int iSeed = 0; iSeed < mInitSeedIndexes.size(); iSeed++)
+                    for (int iSeed = 0; iSeed < (int)(mInitSeedIndexes.size()); iSeed++)
                     {
                         clusters.push_back(samples.row(mInitSeedIndexes[iSeed]));
                     }

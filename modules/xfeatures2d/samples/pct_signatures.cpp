@@ -69,7 +69,7 @@ using namespace cv;
 using namespace xfeatures2d;
 
 
-void printHelpMessage()
+void printHelpMessage(void)
 {
     cout << "Example of the PCTSignatures algorithm computing and visualizing\n"
         "image signature for one image, or comparing multiple images with the first\n"
@@ -160,7 +160,7 @@ int main(int argc, char** argv)
         Ptr<PCTSignaturesSQFD> pctSQFD = PCTSignaturesSQFD::create();
         pctSQFD->computeQuadraticFormDistances(signature, signatures, distances);
 
-        for (int i = 0; i < distances.size(); i++)
+        for (int i = 0; i < (int)(distances.size()); i++)
         {
             cout << "Image: " << argv[i + 2] << ", similarity: " << distances[i] << endl;
         }

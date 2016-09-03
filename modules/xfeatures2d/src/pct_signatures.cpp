@@ -107,10 +107,10 @@ namespace cv
                     {
                         CV_Error(Error::StsBadArg, "Too much cluster seeds or not enough sampling points.");
                     }
-                    for (int iCluster = 0; iCluster < initClusterSeedIndexes.size(); iCluster++)
+                    for (int iCluster = 0; iCluster < (int)(initClusterSeedIndexes.size()); iCluster++)
                     {
                         if (initClusterSeedIndexes[iCluster] < 0
-                            || initClusterSeedIndexes[iCluster] >= initSamplingPoints.size())
+                            || initClusterSeedIndexes[iCluster] >= (int)(initSamplingPoints.size()))
                         {
                             CV_Error(Error::StsBadArg,
                                 "Initial cluster seed indexes contain an index outside the range of the sampling point list.");

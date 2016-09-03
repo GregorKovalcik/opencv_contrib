@@ -69,7 +69,7 @@ using namespace cv;
 using namespace xfeatures2d;
 
 
-void printHelpMessage()
+void printHelpMessage(void)
 {
     cout << "Example of the PCTSignatures algorithm.\n\n"
         "This program computes and visualizes position-color-texture signatures\n"
