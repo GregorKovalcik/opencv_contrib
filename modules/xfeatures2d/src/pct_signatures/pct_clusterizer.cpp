@@ -119,7 +119,7 @@ namespace cv
                 * @param samples List of sampled points.
                 * @param signature Output list of computed centroids - the signature of the image.
                 */
-                void clusterize(const InputArray _samples, OutputArray _signature)
+                void clusterize(InputArray _samples, OutputArray _signature)
                 {
                     CV_Assert(!_samples.empty());
 

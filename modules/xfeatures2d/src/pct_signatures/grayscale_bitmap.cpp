@@ -67,7 +67,7 @@ namespace cv
     {
         namespace pct_signatures
         {
-            GrayscaleBitmap::GrayscaleBitmap(const InputArray _bitmap, int bitsPerPixel)
+            GrayscaleBitmap::GrayscaleBitmap(InputArray _bitmap, int bitsPerPixel)
                 : mBitsPerPixel(bitsPerPixel)
             {
                 Mat bitmap = _bitmap.getMat();

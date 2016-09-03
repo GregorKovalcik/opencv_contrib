@@ -415,8 +415,8 @@ public:
     * @param borderThickness Border thickness of the visualized signature.
     */
     CV_WRAP static void drawSignature(
-        const InputArray source,
-        const InputArray signature,
+        InputArray source,
+        InputArray signature,
         OutputArray result,
         float radiusToShorterSideRatio = 1.0 / 8,
         int borderThickness = 1);
@@ -736,8 +736,8 @@ public:
     * @param _signature1 The second signature.
     */
     CV_WRAP virtual float computeQuadraticFormDistance(
-        const InputArray _signature0,
-        const InputArray _signature1) const = 0;
+        InputArray _signature0,
+        InputArray _signature1) const = 0;
 
     /**
     * @brief Computes Signature Quadratic Form Distance between the reference signature

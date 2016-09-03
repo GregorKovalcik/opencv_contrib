@@ -83,8 +83,8 @@ namespace cv
 
 
                 float computeQuadraticFormDistance(
-                    const InputArray _signature0,
-                    const InputArray _signature1) const;
+                    InputArray _signature0,
+                    InputArray _signature1) const;
 
                 void computeQuadraticFormDistances(
                     const Mat& sourceSignature,
@@ -151,8 +151,8 @@ namespace cv
 
 
             float PCTSignaturesSQFD_Impl::computeQuadraticFormDistance(
-                      const InputArray _signature0,
-                      const InputArray _signature1) const
+                      InputArray _signature0,
+                      InputArray _signature1) const
             {
                 // check input
                 if (_signature0.empty() || _signature1.empty())

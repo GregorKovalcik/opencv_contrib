@@ -90,7 +90,7 @@ namespace cv
                 * @param image Input image.
                 * @param signature Output list of computed image samples.
                 */
-                virtual void sample(const InputArray image, OutputArray samples) const = 0;
+                virtual void sample(InputArray image, OutputArray samples) const = 0;
 
 
                 /**** accessors ****/

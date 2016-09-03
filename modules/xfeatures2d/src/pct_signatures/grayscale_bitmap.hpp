@@ -83,7 +83,7 @@ namespace cv
                 * @param bitsPerPixel How many bits occupy one pixel in grayscale (e.g., 8 ~ 256 grayscale values).
                 *       Must be within [1..8] range.
                 */
-                GrayscaleBitmap(const InputArray bitmap, int bitsPerPixel = 4);
+                GrayscaleBitmap(InputArray bitmap, int bitsPerPixel = 4);
 
                 /**
                 * @brief Return the width of the image in pixels.

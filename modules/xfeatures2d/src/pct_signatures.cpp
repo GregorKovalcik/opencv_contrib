@@ -317,8 +317,8 @@ namespace cv
 
 
         void PCTSignatures::drawSignature(
-            const InputArray _source,
-            const InputArray _signature,
+            InputArray _source,
+            InputArray _signature,
             OutputArray _result,
             float radiusToShorterSideRatio,
             int borderThickness)

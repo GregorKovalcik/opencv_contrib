@@ -112,7 +112,7 @@ namespace cv
                 * @param samples List of sampled points.
                 * @param signature Output list of computed centroids - the signature of the image.
                 */
-                virtual void clusterize(const InputArray samples, OutputArray signature) = 0;
+                virtual void clusterize(InputArray samples, OutputArray signature) = 0;
             };
         }
     }
