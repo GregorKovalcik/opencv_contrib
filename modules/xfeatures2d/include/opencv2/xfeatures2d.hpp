@@ -290,7 +290,7 @@ namespace pct_signatures
     /**
     * @brief Lp distance function selector.
     */
-    enum class DistanceFunction
+    enum DistanceFunction
     {
         L0_25, L0_5, L1, L2, L2SQUARED, L5, L_INFINITY
     };
@@ -298,7 +298,7 @@ namespace pct_signatures
     /**
     * @brief Point distributions supported by random point generator.
     */
-    enum class PointDistribution
+    enum PointDistribution
     {
         UNIFORM,    //!< Generate numbers uniformly.
         REGULAR,    //!< Generate points in a regular grid.
@@ -315,7 +315,7 @@ namespace pct_signatures
     * @cite BeecksUS10
     * @note For selected distance function \f[ d(c_i, c_j) \f]  and parameter \f[ \alpha \f]:
     */
-    enum class SimilarityFunction
+    enum SimilarityFunction
     {
         MINUS,      //!< \f[ -d(c_i, c_j) \f]
         GAUSSIAN,   //!< \f[ e^{ -\alpha * d^2(c_i, c_j)} \f]
@@ -355,7 +355,7 @@ public:
     CV_WRAP static Ptr<PCTSignatures> create(
         const int initSampleCount = 2000,
         const int initSeedCount = 400,
-        const pct_signatures::PointDistribution pointDistribution = pct_signatures::PointDistribution::UNIFORM);
+        const pct_signatures::PointDistribution pointDistribution = pct_signatures::UNIFORM);
 
     /**
     * @brief Creates PCTSignatures algorithm using pre-generated sampling points
@@ -727,7 +727,7 @@ public:
     */
     CV_WRAP static Ptr<PCTSignaturesSQFD> create(
         const pct_signatures::DistanceFunction distanceFunction = pct_signatures::DistanceFunction::L2,
-        const pct_signatures::SimilarityFunction similarityFunction = pct_signatures::SimilarityFunction::HEURISTIC,
+        const pct_signatures::SimilarityFunction similarityFunction = pct_signatures::HEURISTIC,
         const float similarityParameter = 1);
 
     /**

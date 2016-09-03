@@ -113,11 +113,11 @@ namespace cv
             {
                 switch (similarity)
                 {
-                case SimilarityFunction::MINUS:
+                case MINUS:
                     return minusSimilarity(distancefunction, points1, idx1, points2, idx2);
-                case SimilarityFunction::GAUSSIAN:
+                case GAUSSIAN:
                     return gaussianSimilarity(distancefunction, similarityParameter, points1, idx1, points2, idx2);
-                case SimilarityFunction::HEURISTIC:
+                case HEURISTIC:
                     return heuristicSimilarity(distancefunction, similarityParameter, points1, idx1, points2, idx2);
                 default:
                     CV_Error(Error::StsNotImplemented, "Similarity function not implemented!");

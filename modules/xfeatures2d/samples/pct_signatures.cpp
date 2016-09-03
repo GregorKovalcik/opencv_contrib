@@ -119,7 +119,7 @@ int main(int argc, char** argv)
     namedWindow("Result", WINDOW_AUTOSIZE);
 
     // create the algorithm
-    PCTSignatures::generateInitPoints(initPoints, initSampleCount, pct_signatures::PointDistribution::UNIFORM);
+    PCTSignatures::generateInitPoints(initPoints, initSampleCount, pct_signatures::UNIFORM);
     Ptr<PCTSignatures> pctSignatures = PCTSignatures::create(initPoints, initSeedCount);
     pctSignatures->setGrayscaleBits(grayscaleBitsPerPixel);
 

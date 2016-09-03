@@ -387,14 +387,14 @@ namespace cv
 
             switch (pointsDistribution)
             {
-            case PointDistribution::UNIFORM:
+            case UNIFORM:
                 for (int i = 0; i < count; i++)
                 {
                     // returns uniformly distributed float random number from [0, 1) range
                     initPoints[i] = (Point2f(random.uniform((float)0.0, (float)1.0), random.uniform((float)0.0, (float)1.0)));
                 }
                 break;
-            case PointDistribution::REGULAR:
+            case REGULAR:
             {
                 int gridSize = (int)ceil(sqrt(count));
                 const float step = 1.0f / gridSize;
@@ -417,7 +417,7 @@ namespace cv
                 }
                 break;
             }
-            case PointDistribution::NORMAL:
+            case NORMAL:
                 for (int i = 0; i < count; i++)
                 {
                     // returns normally distributed float random number from (0, 1) range with mean 0.5

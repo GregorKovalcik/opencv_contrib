@@ -85,7 +85,7 @@ namespace cv
                     int clusterMinSize = 2,
                     float joiningDistance = 0.2,
                     float dropThreshold = 0,
-                    DistanceFunction distanceFunction = DistanceFunction::L2);
+                    DistanceFunction distanceFunction = L2);
 
 
                 /**** Accessors ****/
