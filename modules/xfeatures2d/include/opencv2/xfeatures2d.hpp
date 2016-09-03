@@ -290,7 +290,7 @@ namespace pct_signatures
     /**
     * @brief Lp distance function selector.
     */
-    enum DistanceFunction
+    enum class DistanceFunction
     {
         L0_25, L0_5, L1, L2, L2SQUARED, L5, L_INFINITY
     };
@@ -298,7 +298,7 @@ namespace pct_signatures
     /**
     * @brief Point distributions supported by random point generator.
     */
-    enum PointDistribution
+    enum class PointDistribution
     {
         UNIFORM,    //!< Generate numbers uniformly.
         REGULAR,    //!< Generate points in a regular grid.
@@ -315,7 +315,7 @@ namespace pct_signatures
     * @cite BeecksUS10
     * @note For selected distance function \f[ d(c_i, c_j) \f]  and parameter \f[ \alpha \f]:
     */
-    enum SimilarityFunction
+    enum class SimilarityFunction
     {
         MINUS,      //!< \f[ -d(c_i, c_j) \f]
         GAUSSIAN,   //!< \f[ e^{ -\alpha * d^2(c_i, c_j)} \f]

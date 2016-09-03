@@ -192,19 +192,19 @@ namespace cv
             {
                 switch (distanceFunction)
                 {
-                case L0_25:
+                case DistanceFunction::L0_25:
                     return distanceL0_25(points1, idx1, points2, idx2);
-                case L0_5:
+                case DistanceFunction::L0_5:
                     return distanceL0_5(points1, idx1, points2, idx2);
-                case L1:
+                case DistanceFunction::L1:
                     return distanceL1(points1, idx1, points2, idx2);
-                case L2:
+                case DistanceFunction::L2:
                     return distanceL2(points1, idx1, points2, idx2);
-                case L2SQUARED:
+                case DistanceFunction::L2SQUARED:
                     return distanceL2Squared(points1, idx1, points2, idx2);
-                case L5:
+                case DistanceFunction::L5:
                     return distanceL5(points1, idx1, points2, idx2);
-                case L_INFINITY:
+                case DistanceFunction::L_INFINITY:
                     return distanceLInfinity(points1, idx1, points2, idx2);
                 default:
                     CV_Error(Error::StsBadArg, "Distance function not implemented!");
