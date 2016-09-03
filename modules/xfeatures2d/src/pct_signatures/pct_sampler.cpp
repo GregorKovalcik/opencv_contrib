@@ -192,7 +192,7 @@ namespace cv
                 void setSamplingPoints(std::vector<Point2f> samplingPoints) { mInitSamplingPoints = samplingPoints; }
 
 
-                void sample(InputArray& _image, OutputArray& _samples) const
+                void sample(InputArray _image, OutputArray _samples) const
                 {
                     // prepare matrices
                     Mat image = _image.getMat();
