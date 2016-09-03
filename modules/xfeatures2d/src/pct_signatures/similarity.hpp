@@ -57,6 +57,11 @@ References:
     ACM, 2010.
 */
 
+#ifndef _OPENCV_XFEATURES_2D_PCT_SIGNATURES_SIMILARITY_HPP_
+#define _OPENCV_XFEATURES_2D_PCT_SIGNATURES_SIMILARITY_HPP_
+
+#ifdef __cplusplus
+
 #include "precomp.hpp"
 
 #include "distance.hpp"
@@ -122,3 +127,7 @@ namespace cv
         }
     }
 }
+
+#endif
+
+#endif
