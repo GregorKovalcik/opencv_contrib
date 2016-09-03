@@ -290,7 +290,7 @@ namespace pct_signatures
     /**
     * @brief Lp distance function selector.
     */
-    CV_WRAP enum DistanceFunction
+    enum DistanceFunction
     {
         L0_25, L0_5, L1, L2, L2SQUARED, L5, L_INFINITY
     };
@@ -298,7 +298,8 @@ namespace pct_signatures
     /**
     * @brief Point distributions supported by random point generator.
     */
-    CV_WRAP enum PointDistribution {
+    enum PointDistribution
+    {
         UNIFORM,    //!< Generate numbers uniformly.
         REGULAR,    //!< Generate points in a regular grid.
         NORMAL      //!< Generate points with normal (gaussian) distribution.
@@ -314,7 +315,7 @@ namespace pct_signatures
     * @cite BeecksUS10
     * @note For selected distance function \f[ d(c_i, c_j) \f]  and parameter \f[ \alpha \f]:
     */
-    CV_WRAP enum SimilarityFunction
+    enum SimilarityFunction
     {
         MINUS,      //!< \f[ -d(c_i, c_j) \f]
         GAUSSIAN,   //!< \f[ e^{ -\alpha * d^2(c_i, c_j)} \f]
